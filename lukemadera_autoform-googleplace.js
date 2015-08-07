@@ -48,7 +48,7 @@ var afGooglePlace ={
       street: '',
       city: '',
       state: '',
-      zip: '',
+      postCode: '',
       country: ''
     };
     
@@ -89,7 +89,7 @@ var afGooglePlace ={
       'route': 'street',
       'locality': 'city',
       'administrative_area_level_1': 'state',
-      'postal_code': 'zip',
+      'postal_code': 'postCode',
       'country': 'country'
     };
     var ii, xx;
@@ -240,7 +240,7 @@ Template.afGooglePlace.rendered =function() {
   ELES.googleAttribution =this.find('div.lm-autoform-google-place-attribution');
   var eleDropdown =this.find('div.lm-autoform-google-place-predictions');
   var types =[];    //either [blank] or one or more of: 'establishment', 'geocode'
-  var componentRestrictions ={country:'us'};
+  var componentRestrictions ={};
   var options = {
     //bounds: defaultBounds,
     types: types,
